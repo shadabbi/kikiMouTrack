@@ -1,0 +1,1 @@
+cmd_Release/addon.node := c++ -bundle -framework ApplicationServices -undefined dynamic_lookup -Wl,-search_paths_first -mmacosx-version-min=10.15 -arch arm64 -L./Release -stdlib=libc++  -o Release/addon.node Release/obj.target/addon/addon.o -framework ApplicationServices -framework Carbon -framework CoreFoundation

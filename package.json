@@ -1,0 +1,15 @@
+{
+  "name": "kikitrack",
+  "version": "1.0.0",
+  "description": "This is a package to track mouse and keyboard",
+  "main": "kikiMouTrack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Mouse Track","Keyboard Track"],
+  "author": "Shadab Ali",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.17.0"
+  }
+}

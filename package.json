@@ -4,12 +4,30 @@
   "description": "This is a package to track mouse and keyboard",
   "main": "kikiMouTrack.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-pre-gyp install",
+    "postinstall": "node ./scripts/install.js",
+    "publish": "node-pre-gyp package publish"
   },
-  "keywords": ["Mouse Track","Keyboard Track"],
+  "keywords": [
+    "Mouse Track",
+    "Keyboard Track"
+  ],
   "author": "Shadab Ali",
   "license": "ISC",
   "dependencies": {
-    "nan": "^2.17.0"
+    "nan": "^2.17.0",
+    "node-pre-gyp": "^0.17.0"
+  },
+  "binary": {
+    "module_name": "kikitrack",
+    "module_path": "./lib/binding/",
+    "host": "https://github.com/user/repo/releases/download"
+  },
+  "publishConfig": {
+    "binary": {
+      "module_name": "kikitrack",
+      "module_path": "./lib/binding/"
+    }
   }
 }

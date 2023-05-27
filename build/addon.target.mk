@@ -141,7 +141,6 @@ $(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.cc FORCE_DO_CMD
 # End of this set of suffix rules
 ### Rules for final target.
 LDFLAGS_Debug := \
-	-framework ApplicationServices \
 	-undefined dynamic_lookup \
 	-Wl,-search_paths_first \
 	-mmacosx-version-min=10.15 \
@@ -150,12 +149,10 @@ LDFLAGS_Debug := \
 	-stdlib=libc++
 
 LIBTOOLFLAGS_Debug := \
-	-framework ApplicationServices \
 	-undefined dynamic_lookup \
 	-Wl,-search_paths_first
 
 LDFLAGS_Release := \
-	-framework ApplicationServices \
 	-undefined dynamic_lookup \
 	-Wl,-search_paths_first \
 	-mmacosx-version-min=10.15 \
@@ -164,14 +161,10 @@ LDFLAGS_Release := \
 	-stdlib=libc++
 
 LIBTOOLFLAGS_Release := \
-	-framework ApplicationServices \
 	-undefined dynamic_lookup \
 	-Wl,-search_paths_first
 
-LIBS := \
-	-framework ApplicationServices \
-	-framework Carbon \
-	-framework CoreFoundation
+LIBS :=
 
 $(builddir)/addon.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(builddir)/addon.node: LIBS := $(LIBS)

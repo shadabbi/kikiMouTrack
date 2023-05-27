@@ -374,7 +374,7 @@
     "openssl_quic": "true",
     "ossfuzz": "false",
     "shlib_suffix": "108.dylib",
-    "target_arch": "arm64",
+    "target_arch": "arm",
     "v8_enable_31bit_smis_on_64bit_arch": 0,
     "v8_enable_gdbjit": 0,
     "v8_enable_hugepage": 0,
